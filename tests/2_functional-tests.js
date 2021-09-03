@@ -63,7 +63,8 @@ suite('Functional Tests', function () {
 });
 
 const Browser = require('zombie');
-Browser.site = 'https://boilerplate-mochachai.naddiya.repl.co';
+// Browser.site = 'https://boilerplate-mochachai.naddiya.repl.co';
+Browser.localhost('example.com', (process.env.PORT || 3000));
 
 suite('Functional Tests with Zombie.js', function () {
   const browser = new Browser();
